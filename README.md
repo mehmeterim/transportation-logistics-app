@@ -1,30 +1,35 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Proje: UberFreight Platformu Backend
+Geliştirme
+Açıklama:
+Şu anda, bir UberFreight platformunda çalışıyorsunuz ve yeni bir özellik eklemek istiyorsunuz.
+Müşteriler artık favori taşıyıcılarını takip edebilecek ve bu taşıyıcılarla ilgili indirim veya
+promosyonları alabilecekler.
+Görev:
+Bu özelliği eklemek için backend tarafinda yapmanız gerekenleri aşağıda bulabilirsin:
+Veritabanı Şeması ve Modelleri:
+• Favori taşıyıcıların saklanması için veritabanı şemasını ve ilgili modelleri tasarlayın.
+Hangi bilgiler saklanacak ve nasıl ilişkilendirilecek?
+API Endpoints:
+• Favori taşıyıcı ekleme, kaldırma ve listeleme işlemlerini gerçekleştirecek
+API endpoint'lerini tasarlayın.
+• Bu endpoint'ler hangi HTTP metotlarını kullanacak ve hangi veri yapılarıyla iletişim
+sağlayacak?
+Auth ve Güvenlik:
+• Bu özellik için gerekli olan yetkilendirme ve kimlik doğrulama adımlarını belirleyin.
+Kullanıcılar sadece kendi favori ürünlerini yönetebilmelidir.
+Testler:
+• Yazdığınız kodları test etmek için nasıl bir strateji izleyeceksiniz?
+• Hangi test senaryolarını düşünüyorsunuz?
+Performans ve Ölçeklenebilirlik:
+• Sisteminizdeki bu yeni özelliğin performansını ve ölçeklenebilirliğini nasıl optimize
+edersiniz?
+Dikkat Edilmesi Gereken Noktalar:
+• TypeScript ve Nest.js'in kullanımı ve uygunluğu.
+• Veritabanı tasarımı ve etkili sorgu yapıları. • RESTful API tasarımı ve güvenlik önlemleri.
+• Performans ve ölçeklenebilirlik konularına verilen önem.
+• Teststratejisi ve kod kalitesi
 
 ## Installation
 
