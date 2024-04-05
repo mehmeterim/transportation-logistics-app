@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { UsersController } from './users.controller';
 import { UsersService } from './users.service';
 import { JwtModule } from '@nestjs/jwt';
-import { User, UserSchema } from 'schemas/user.schema';
+import { User, UserSchema } from 'src/schemas/user.schema';
 import { MongooseModule } from '@nestjs/mongoose';
-import { JWT_PRIVATE_KEY } from 'config/configuration';
+import { JWT_PRIVATE_KEY } from 'src/config/configuration';
 
 @Module({
   imports: [

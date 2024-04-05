@@ -7,6 +7,9 @@ export type TransporterDocument = HydratedDocument<Transporter>;
 export class Transporter {
   @Prop()
   fullName: string;
+
+  @Prop()
+  address: string;
 }
 
 export const TransporterSchema = SchemaFactory.createForClass(Transporter);
