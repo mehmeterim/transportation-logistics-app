@@ -12,7 +12,7 @@ import { JWT_PRIVATE_KEY } from 'src/config/configuration';
     JwtModule.register({
       global: true,
       secret: JWT_PRIVATE_KEY,
-      signOptions: { expiresIn: '60s' },
+      signOptions: { expiresIn: '60000s' },
     }),
   ],
   controllers: [UsersController],
