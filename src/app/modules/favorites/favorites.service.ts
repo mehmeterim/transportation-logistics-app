@@ -19,7 +19,9 @@ export class FavoritesService {
   ) {}
 
   async userFavorites(userId: string): Promise<Favorite[]> {
-    return this.favoriteModel.find({ userId: userId });
+    return this.favoriteModel
+      .find({ userId: userId })
+      .populate('transporterId');
   }
 
   async createFavorite(
