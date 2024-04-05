@@ -1,10 +1,9 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose, { HydratedDocument, ObjectId } from 'mongoose';
-import { Transporter, TransporterDocument } from './transporter.schema';
 
 export type FavoriteDocument = HydratedDocument<Favorite>;
 
-@Schema()
+@Schema({ toJSON: { virtuals: true } })
 export class Favorite {
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
   userId: ObjectId;
@@ -13,4 +12,20 @@ export class Favorite {
   transporterId: ObjectId;
 }
 
-export const FavoriteSchema = SchemaFactory.createForClass(Favorite);
+const FavoriteSchema = SchemaFactory.createForClass(Favorite);
+
+FavoriteSchema.virtual('transporter', {
+  ref: 'Transporter',
+  localField: 'transporterId',
+  foreignField: '_id',
+  justOne: true,
+});
+
+FavoriteSchema.virtual('promotions', {
+  ref: 'Promotion',
+  localField: 'userId',
+  foreignField: 'userId',
+  justOne: false,
+});
+
+export { FavoriteSchema };

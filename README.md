@@ -35,7 +35,7 @@ $ npm install
 ## Running the app
 
 ```bash
-# development
+# developmentv
 $ npm run start
 
 # watch mode
@@ -58,16 +58,36 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## End Points
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Register
 
-## Stay in touch
+- URL : POST - /users/register
+- Payload : {
+  "fullName": "test",
+  "email": "test@test.com",
+  "password": "123"
+  }
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Login
 
-## License
+- URL : POST - /users/login
+- Payload : {
+  "email": "test@test.com",
+  "password": "123"
+  }
 
-Nest is [MIT licensed](LICENSE).
+### Favorite List
+
+- URL : Get - /favorites
+
+### Add Favorite
+
+- URL : POST - /favorites
+- Payload : {
+  "transporterId": "66105a4c68e712fc59b7ee3d"
+  }
+
+### Delete Favorite
+
+- URL : POST - /favorites/:id
