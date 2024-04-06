@@ -14,6 +14,9 @@ import { FavoritesService } from './favorites.service';
 import { Favorite } from 'src/schemas/favorite.schema';
 import { AuthGuard } from 'src/guard/auth.guard';
 import { addFavoriteDTO } from 'src/dto/addFavoriteDTO';
+import { ObjectId } from 'mongoose';
+import { deleteFavoriteDTO } from 'src/dto/deleteFavoriteDTO';
+import { responseDTO } from 'src/dto/responseDTO';
 
 @Controller('favorites')
 export class FavoritesController {
@@ -30,23 +33,41 @@ export class FavoritesController {
   @UseGuards(AuthGuard)
   @HttpCode(HttpStatus.OK)
   @Post('')
-  addFavorite(
+  async addFavorite(
     @Request() req,
     @Body()
     addFavoriteDTO: addFavoriteDTO,
-  ): Promise<Favorite> {
+  ): Promise<responseDTO> {
     const { id } = req.user;
-    return this.favoriteService.createFavorite(
+
+    const data = await this.favoriteService.createFavorite(
       id,
       addFavoriteDTO.transporterId,
     );
+
+    return {
+      status: true,
+      data: data,
+    };
   }
 
   @UseGuards(AuthGuard)
   @HttpCode(HttpStatus.OK)
   @Delete(':id')
-  deleteFavorite(@Request() req, @Param() params: any): Promise<boolean> {
+  async deleteFavorite(
+    @Request() req,
+    @Param() params: deleteFavoriteDTO,
+  ): Promise<responseDTO> {
     const user = req.user;
-    return this.favoriteService.deleteFavorite(params.id, user.id);
+
+    const result = await this.favoriteService.deleteFavorite(
+      params.id,
+      user.id,
+    );
+
+    return {
+      status: result,
+      data: undefined,
+    };
   }
 }

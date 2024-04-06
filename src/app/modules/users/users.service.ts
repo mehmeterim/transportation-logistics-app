@@ -51,4 +51,10 @@ export class UsersService implements OnModuleInit {
       password: hashedPassword,
     });
   }
+
+  async findByEmail(email: string): Promise<User | null> {
+    return this.userModel.findOne({
+      email: email,
+    });
+  }
 }
