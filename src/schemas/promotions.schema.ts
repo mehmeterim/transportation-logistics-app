@@ -5,10 +5,14 @@ export type PromotionDocument = HydratedDocument<Promotion>;
 
 @Schema()
 export class Promotion {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User' })
+  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', index: true })
   userId: string;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Transporter' })
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Transporter',
+    index: true,
+  })
   transporterId: string;
 
   @Prop()

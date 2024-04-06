@@ -96,3 +96,11 @@ $ npm run test:cov
 ### Delete Favorite
 
 - URL : POST - /favorites/:id
+
+## NOTES
+
+- It was used for user authentication with JWT.
+- It was used rate limit (60 request in 60 seconds).
+- It was used memory caching in favorites endpoints.
+- It was wrote test for only user controller and service.
+- It was used mongodb for database.
