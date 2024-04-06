@@ -65,6 +65,10 @@ $ npm run test:cov
 
 ## End Points
 
+### Swagger
+
+- URL : GET - /swagger
+
 ### Register
 
 - URL : POST - /users/register
